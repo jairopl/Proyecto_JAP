@@ -16,15 +16,9 @@ function print_sub_nav($nav) {
 function print_nav_bar($active = 'index') {
   $links = array(
     'index' => 'index.php',
-    'visitantes' => 'lista_visitantes.php',
-    'equipos' => '#',
-    'registrar_usuario' => 'registrar_usuario.php',
   );
   $nombres_paginas = array(
     'index' => 'Inicio',
-    'registrar_usuario' => 'Usuarios sistema',
-    'visitantes' => 'Visitantes',
-    'equipos' => 'Equipos',
   );
   echo '<div role="navigation" class="navbar navbar-inverse">
       <div class="container">
@@ -43,7 +37,9 @@ function print_nav_bar($active = 'index') {
     }
     echo "<li$class><a href='$link'>{$nombres_paginas[$page]}</a></li>";
   }
-  echo "</ul></div></div></div>";
+  echo "</ul><ul class='nav navbar-nav navbar-right'>
+  <li><a href='" . _get("webBase") . "/logout.php'>Cerrar sesión</a></li>
+  </ul></div></div></div>";
 }
 
 /** Hecho por JAPL. 24-04-2014 
