@@ -10,10 +10,6 @@ include_once "include_page_elements.php";
  */
 $JP["webURL"] = "http://localhost/Proyecto_JAP";
 $JP["webName"] = "Accesos UNAD - JAP";
-$JP["webTheme"] = "default";
-$JP["webSituation"] = "Active";
-$JP["webMessage"] = "";
-$JP["benchMark"] = false;
 
 $JP["webBase"] = $JP["webURL"];
 

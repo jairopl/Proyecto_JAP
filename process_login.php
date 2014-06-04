@@ -1,6 +1,5 @@
 <?php 
 include_once "include/include.php";
-include_once "include/alerts.php";
 include_once "include/database.php";
 
 $sql = "SELECT * FROM usuario WHERE user = '$_POST[user]' AND password = '$_POST[pass]'";
