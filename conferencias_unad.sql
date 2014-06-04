@@ -15,7 +15,7 @@ CREATE TABLE `acceso` (
   `sala` int(11) NOT NULL,
   `fecha` date NOT NULL,
   `hora_ingreso` time NOT NULL,
-  `hora_salida` time NOT NULL,
+  `hora_salida` time DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `cc` (`cc`),
   KEY `sala` (`sala`),
@@ -24,7 +24,7 @@ CREATE TABLE `acceso` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `acceso` (`id`, `cc`, `sala`, `fecha`, `hora_ingreso`, `hora_salida`) VALUES
-(1,	123,	1,	'2014-06-02',	'18:57:18',	'00:00:00');
+(1,	123,	1,	'2014-06-02',	'18:57:18',	NULL);
 
 DROP TABLE IF EXISTS `asistente`;
 CREATE TABLE `asistente` (
@@ -58,7 +58,7 @@ CREATE TABLE `inscripcion` (
   KEY `sala` (`sala`),
   CONSTRAINT `inscripcion_ibfk_1` FOREIGN KEY (`cc`) REFERENCES `asistente` (`cc`),
   CONSTRAINT `inscripcion_ibfk_2` FOREIGN KEY (`sala`) REFERENCES `sala` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 INSERT INTO `inscripcion` (`id`, `cc`, `sala`) VALUES
 (3,	159,	1);
@@ -75,4 +75,15 @@ INSERT INTO `sala` (`id`, `nombre`) VALUES
 (2,	'Electronico'),
 (3,	'Industrial');
 
--- 2014-06-03 03:22:17
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE `usuario` (
+  `user` varchar(25) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  PRIMARY KEY (`user`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `usuario` (`user`, `password`) VALUES
+('jairo',	'prieto'),
+('root',	'root');
+
+-- 2014-06-04 04:43:03

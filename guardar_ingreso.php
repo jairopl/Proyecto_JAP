@@ -12,7 +12,11 @@ $resultado = mysql_query($sql, $conexion);
 // Si ya tiene accesos anteriores
 if ($fila = mysql_fetch_assoc($resultado)) {
   // si entro pero no salio
-  var_dump($fila);
+  if (empty($fila['hora_salida'])) {
+    print "Ha ingresado a la sala";
+  } else {
+    print "Ha salido de la sala";
+  }
 } else {
   echo "No se ha registrado ingreso.";
 }

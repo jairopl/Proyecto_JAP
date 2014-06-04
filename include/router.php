@@ -3,7 +3,7 @@
 if (!function_exists("execute")) {
   function execute()
   {   
-    global $Load, $ZP;
+    global $Load, $JP;
     
     $applicationController = false;
     $match = false;
@@ -353,7 +353,7 @@ if (!function_exists("ping")) {
 if (!function_exists("redirect")) {
   function redirect($URL = false, $time = false)
   {
-    global $ZP;
+    global $JP;
 
     if (!$time) {   
       if (!$URL) {

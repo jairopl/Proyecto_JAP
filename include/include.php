@@ -8,13 +8,13 @@ include_once "include_page_elements.php";
 /**
  * Website
  */
-$ZP["webURL"] = "http://localhost/Proyecto_JAP";
-$ZP["webName"] = "Accesos UNAD - JAP";
-$ZP["webTheme"] = "default";
-$ZP["webSituation"] = "Active";
-$ZP["webMessage"] = "";
-$ZP["benchMark"] = false;
+$JP["webURL"] = "http://localhost/Proyecto_JAP";
+$JP["webName"] = "Accesos UNAD - JAP";
+$JP["webTheme"] = "default";
+$JP["webSituation"] = "Active";
+$JP["webMessage"] = "";
+$JP["benchMark"] = false;
 
-$ZP["webBase"] = $ZP["webURL"];
+$JP["webBase"] = $JP["webURL"];
 
 ?>
